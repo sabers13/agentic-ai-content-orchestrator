@@ -1,0 +1,63 @@
+{
+  "title": "LLM A/B Testing for SEO Content",
+  "slug": "llm-a-b-testing-for-seo-content",
+  "tone": "authoritative",
+  "tone_meta": {
+    "desc": "confident, expert tone",
+    "temperature": 0.3
+  },
+  "keywords": [
+    "llm",
+    "seo",
+    "a/b test"
+  ],
+  "outline": [
+    {
+      "heading": "Introduction",
+      "notes": "Explain why LLM A/B Testing for SEO Content matters."
+    },
+    {
+      "heading": "Key Concepts",
+      "notes": "Define core ideas; relate to WordPress + automation if relevant."
+    },
+    {
+      "heading": "Step-by-step / Framework",
+      "notes": "Actionable steps the reader can follow."
+    },
+    {
+      "heading": "SEO / Practical Tips",
+      "notes": "Include keywords: llm, seo, a/b test"
+    },
+    {
+      "heading": "Conclusion / CTA",
+      "notes": "Summarize and invite to read more posts."
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "heading": "Introduction",
+      "body": "LLM A/B Testing for SEO Content is an important topic for creators who want to automate and scale. This article explains it in a authoritative tone."
+    },
+    {
+      "id": "body",
+      "heading": "Main Content",
+      "body": "Expand each outline point into 2–4 paragraphs. Add examples that fit WordPress.com and AI automation."
+    },
+    {
+      "id": "cta",
+      "heading": "Next Steps",
+      "body": "Add a CTA to explore related posts or to try the orchestrator."
+    }
+  ],
+  "seo": {
+    "primary_keyword": "llm",
+    "secondary_keywords": [
+      "seo",
+      "a/b test"
+    ]
+  },
+  "created_at": "2025-11-05T02:04:42.666032Z",
+  "status": "draft-generated",
+  "source": "content_brain"
+}

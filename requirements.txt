@@ -1,0 +1,14 @@
+requests
+python-dotenv
+pydantic>=2.0
+prefect>=3.0.0
+openai
+typer
+rich
+streamlit
+sqlalchemy
+textstat
+rapidfuzz
+tqdm
+Markdown
+beautifulsoup4

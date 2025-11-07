@@ -1,0 +1,63 @@
+{
+  "title": "Prefect vs n8n for ML Workflows",
+  "slug": "prefect-vs-n8n-for-ml-workflows",
+  "tone": "technical",
+  "tone_meta": {
+    "desc": "detailed, assumes technical audience",
+    "temperature": 0.4
+  },
+  "keywords": [
+    "prefect",
+    "n8n",
+    "orchestration"
+  ],
+  "outline": [
+    {
+      "heading": "Introduction",
+      "notes": "Explain why Prefect vs n8n for ML Workflows matters."
+    },
+    {
+      "heading": "Key Concepts",
+      "notes": "Define core ideas; relate to WordPress + automation if relevant."
+    },
+    {
+      "heading": "Step-by-step / Framework",
+      "notes": "Actionable steps the reader can follow."
+    },
+    {
+      "heading": "SEO / Practical Tips",
+      "notes": "Include keywords: prefect, n8n, orchestration"
+    },
+    {
+      "heading": "Conclusion / CTA",
+      "notes": "Summarize and invite to read more posts."
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "heading": "Introduction",
+      "body": "Prefect vs n8n for ML Workflows is an important topic for creators who want to automate and scale. This article explains it in a technical tone."
+    },
+    {
+      "id": "body",
+      "heading": "Main Content",
+      "body": "Expand each outline point into 2–4 paragraphs. Add examples that fit WordPress.com and AI automation."
+    },
+    {
+      "id": "cta",
+      "heading": "Next Steps",
+      "body": "Add a CTA to explore related posts or to try the orchestrator."
+    }
+  ],
+  "seo": {
+    "primary_keyword": "prefect",
+    "secondary_keywords": [
+      "n8n",
+      "orchestration"
+    ]
+  },
+  "created_at": "2025-11-05T02:04:42.665694Z",
+  "status": "draft-generated",
+  "source": "content_brain"
+}

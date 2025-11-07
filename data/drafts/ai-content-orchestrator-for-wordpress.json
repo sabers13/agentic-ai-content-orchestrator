@@ -1,0 +1,65 @@
+{
+  "title": "AI Content Orchestrator for WordPress",
+  "slug": "ai-content-orchestrator-for-wordpress",
+  "tone": "practical",
+  "tone_meta": {
+    "desc": "short, actionable, for busy readers",
+    "temperature": 0.5
+  },
+  "keywords": [
+    "ai",
+    "wordpress",
+    "automation",
+    "content pipeline"
+  ],
+  "outline": [
+    {
+      "heading": "Introduction",
+      "notes": "Explain why AI Content Orchestrator for WordPress matters."
+    },
+    {
+      "heading": "Key Concepts",
+      "notes": "Define core ideas; relate to WordPress + automation if relevant."
+    },
+    {
+      "heading": "Step-by-step / Framework",
+      "notes": "Actionable steps the reader can follow."
+    },
+    {
+      "heading": "SEO / Practical Tips",
+      "notes": "Include keywords: ai, wordpress, automation, content pipeline"
+    },
+    {
+      "heading": "Conclusion / CTA",
+      "notes": "Summarize and invite to read more posts."
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "heading": "Introduction",
+      "body": "AI Content Orchestrator for WordPress is an important topic for creators who want to automate and scale. This article explains it in a practical tone."
+    },
+    {
+      "id": "body",
+      "heading": "Main Content",
+      "body": "Expand each outline point into 2–4 paragraphs. Add examples that fit WordPress.com and AI automation."
+    },
+    {
+      "id": "cta",
+      "heading": "Next Steps",
+      "body": "Add a CTA to explore related posts or to try the orchestrator."
+    }
+  ],
+  "seo": {
+    "primary_keyword": "ai",
+    "secondary_keywords": [
+      "wordpress",
+      "automation",
+      "content pipeline"
+    ]
+  },
+  "created_at": "2025-11-05T02:04:42.665301Z",
+  "status": "draft-generated",
+  "source": "content_brain"
+}
