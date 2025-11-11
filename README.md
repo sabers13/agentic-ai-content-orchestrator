@@ -1,4 +1,4 @@
-# 🧠 Agentic AI Content Orchestrator
+# 🧠 Agentic AI Content Workflow Engine
 
 End-to-end system that compares LLMs, enforces content quality, and publishes winning drafts directly to WordPress.com. Built with Prefect flows, modular agents, and Streamlit dashboards so you can run the entire pipeline locally, in Docker, or on Prefect Cloud.
 
@@ -29,12 +29,12 @@ brief/topic
    │       ├── formatting helpers → sanitized HTML
    │       └── wp_client → WordPress.com REST API + data/runs.sqlite (published_posts)
    │
-   └── dashboards (src/dashboard) + Prefect flows (src/orchestrator)
+   └── dashboards (src/dashboard) + Prefect flows (src/workflow engine)
 ```
 
-Key flows live in `src/orchestrator/flows.py`:
+Key flows live in `src/workflow engine/flows.py`:
 
-- `ai-content-orchestrator` – generate → quality gate → publish (optional)
+- `ai-content-workflow engine` – generate → quality gate → publish (optional)
 - `post-engagement-telemetry` – pulls view counts via WordPress Stats API for recent posts
 
 ---
@@ -46,7 +46,7 @@ src/
 ├── common/            # shared config + helpers
 ├── content_brain/     # topic ingestion + outline/SEO helpers
 ├── llm_compare/       # model abstractions, evaluator, storage
-├── orchestrator/      # Prefect flows + tasks
+├── workflow engine/      # Prefect flows + tasks
 ├── publisher/         # formatting, WordPress clients, storage
 ├── quality_agent/     # readability/relevance/plagiarism scoring
 └── dashboard/         # Streamlit dashboard + pipeline runner UI
@@ -83,9 +83,10 @@ tests/                 # pytest suites (formatting, smoke, etc.)
 
 ### Prefect CLI
 ```bash
-python -m src.orchestrator.flows --brief "AI content orchestrator for WordPress.com" \
-    --model-a gpt-5o --model-b gpt-5o-mini --auto-publish true
+python -m src.workflow engine.flows --brief "AI content workflow engine for WordPress.com" \
+    --model-a gpt-5o --model-b gpt-5o-mini --auto-publish true --tone practical
 ```
+Add `--tone friendly` (or any descriptor) to nudge both models toward that writing voice.
 
 ### Streamlit dashboard
 ```bash
@@ -97,7 +98,7 @@ Shows SLO indicators, LLM runs, published posts, and the latest `data/final` art
 ```bash
 streamlit run src/dashboard/run_pipeline_app.py
 ```
-Walks through each stage interactively, surfaces metrics, and links to the published post when auto-publish is on.
+Walks through each stage interactively, surfaces metrics, and links to the published post when auto-publish is on. Includes a tone selector plus custom text box so editors can enforce voice guidance without touching code.
 
 ---
 
@@ -106,6 +107,7 @@ Walks through each stage interactively, surfaces metrics, and links to the publi
 | Variable | Purpose |
 |----------|---------|
 | `MODEL_PRIMARY` / `MODEL_SECONDARY` | Names of the two models compared in `llm_compare`. |
+| `Tone (runtime)` | Select via CLI `--tone` flag or Streamlit dropdown; omitted values default to a confident editorial voice. |
 | `QUALITY_THRESHOLD`, `SEO_THRESHOLD` | Targets for dashboard SLO badges and gating. |
 | `WP_DOTCOM_API_BASE`, `WP_DOTCOM_SITE` | WordPress REST endpoint and site handle. |
 | `PREFECT_API_URL` | Set to empty (`""`) for local/Docker runs to avoid Prefect Cloud lookups. |
@@ -157,8 +159,8 @@ See `docs/TROUBLESHOOTING.md` for deeper fixes.
 | Stage | Result | Artifact / Link |
 |-------|--------|-----------------|
 | LLM Compare | ✅ Winner: `gpt-5` | `data/runs/2025-11-05-gpt5.json` |
-| Quality Agent | ✅ Quality 79.68 / SEO 75 | `data/final/ai-content-orchestrator-for-wordpress-com.json` |
-| Publisher | ✅ Published | [View post](https://sabersojudi.wordpress.com/2025/11/05/ai-content-orchestrator-for-wordpress-com/) |
+| Quality Agent | ✅ Quality 79.68 / SEO 75 | `data/final/ai-content-workflow engine-for-wordpress-com.json` |
+| Publisher | ✅ Published | [View post](https://sabersojudi.wordpress.com/2025/11/05/ai-content-workflow engine-for-wordpress-com/) |
 | Logging | ✅ Inserted | `data/runs.sqlite` → `published_posts` |
 
 **Metrics:** Quality 79.68 · SEO 75 · Readability 51.49 · Relevance 80.52 · Plagiarism 0%  
@@ -170,7 +172,7 @@ See `docs/TROUBLESHOOTING.md` for deeper fixes.
 ## Roadmap Highlights
 
 - Engagement telemetry flow + `post_views` table for daily stats.
-- Title experimentation scaffold ready in `src/orchestrator/flows.py`.
+- Title experimentation scaffold ready in `src/workflow engine/flows.py`.
 - SLO indicators in Streamlit UI tied to `SEO_THRESHOLD` / `QUALITY_THRESHOLD`.
 
 Contributions and experiments welcome—open an issue or PR describing the scenario you’re targeting.
